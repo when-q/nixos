@@ -1,2 +1,0 @@
-# nixos
-nixos with flake

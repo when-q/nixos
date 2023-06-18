@@ -33,6 +33,7 @@
 
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.auto-optimise-store = true;
   hardware.opengl.enable = true;
   # Enable the X11 windowing system.
   console.useXkbConfig = true;

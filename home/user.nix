@@ -5,6 +5,5 @@
       discord
       tdesktop
       spotify
-      spicetify-cli
     ];
 }

@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, inputs, ...}:
 {
 
   xdg.portal = {
@@ -7,11 +7,17 @@
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
-  programs.hyprland = {
+#  programs.hyprland = {
+#    enable = true;
+#    xwayland.enable = true;
+#    xwayland.hidpi = false;
+#    nvidiaPatches = true;
+#  };
+
+  programs.waybar = {
     enable = true;
-    xwayland.enable = true;
-    xwayland.hidpi = false;
-    nvidiaPatches = true;
-  };
-  programs.waybar.enable = true;
+    package = pkgs.waybar.overrideAttrs (oldAttrs: {
+      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+    });
+ };
 }

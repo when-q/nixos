@@ -11,6 +11,7 @@
         source-han-serif
         libre-baskerville
         eb-garamond
+        meslo-lg
       ];
     };
 }

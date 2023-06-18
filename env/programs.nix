@@ -2,12 +2,10 @@
 {
   environment.defaultPackages = lib.mkForce [];
   environment.systemPackages = with pkgs; [
-    meslo-lg
     rofi
     curl
     ripgrep
     kitty
-    dunst
   ]++[
     grim
     slurp
