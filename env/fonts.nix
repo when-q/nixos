@@ -4,7 +4,7 @@
       fontconfig.enable = true;
       fontconfig.hinting.autohint = true;
       fontconfig.antialias = true;
-      fonts = with pkgs;
+      packages = with pkgs;
       [
         nerdfonts 
         noto-fonts-cjk

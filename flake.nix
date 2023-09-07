@@ -2,8 +2,9 @@
   description = "NixOS configuration with flake";
   inputs = {
 
-    nixUnstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    #nixUnstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+#    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -13,7 +14,7 @@
 
   outputs = inputs@{
     self,
-    nixUnstable,
+#    nixUnstable,
     nixpkgs,
     home-manager,
     ...
@@ -23,7 +24,7 @@
 
         specialArgs = {
           inherit nixpkgs;
-          inherit nixUnstable;
+#          inherit nixUnstable;
           inherit home-manager;
         };
         modules = [

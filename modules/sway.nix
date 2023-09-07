@@ -67,9 +67,12 @@ in
       wl-clipboard
       wf-recorder
       mako # notification daemon
+      xdg-utils # for opening default programs when clicking links
       grim
       slurp
       dmenu # Dmenu is the default in the config but i recommend wofi since its wayland native
+      configure-gtk
+      dbus-sway-environment
     ];
     extraSessionCommands = ''
       export SDL_VIDEODRIVER=wayland

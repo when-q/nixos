@@ -6,7 +6,7 @@
     curl
     ripgrep
     kitty
-  ]++[
+  ] ++ [
     grim
     slurp
   ];
@@ -15,4 +15,5 @@
   programs.zsh.enable = true;
   programs.git.enable = true;
   programs.neovim.enable = true;
+  programs.tmux.enable = true;
 }

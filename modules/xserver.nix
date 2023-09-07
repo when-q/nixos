@@ -9,7 +9,7 @@
     xkbVariant = "";
     xkbOptions= "ctrl:swapcaps";
 
-    #########videoDrivers = [ "nvidia" ];
+    #videoDrivers = [ "nvidia" ];
     videoDrivers = [ "nouveau" ];
     libinput =
     {
