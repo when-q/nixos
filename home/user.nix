@@ -9,11 +9,23 @@
       universal-ctags
       cscope
       global
-      fzf
       zoxide
       fd
       bat
     ];
     programs.direnv.enable = true;
     programs.direnv.nix-direnv.enable = true;
+
+
+
+
+    programs.fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    programs.bat.enable = true;
+    home.file = {
+    ".zshrc".source = ./zshrc;
+     };
 }

@@ -1,0 +1,45 @@
+# zstyle - completion
+#bindkey -v
+autoload -Uz compinit
+compinit
+eval "$(zoxide init zsh)"
+export KEYTIMEOUT=0.5
+# vim-zsh-config
+eval "$(direnv hook zsh)"
+export PATH=$HOME/.config/rofi/scripts:$PATH
+#export LIBRARY_PATH="$LIBRARY_PATH:/Users/me/.local/lib"
+export DIRENV_LOG_FORMAT=
+#export PATH="~/.emacs.d/bin/:$PATH"
+export PATH=~/.emacs.d/bin/:$PATH
+#alias emacs='emacs & disown %1 > /dev/null'
+#eval $(thefuck --alias)
+source ~/.zsh-local/zsh-source.zsh 
+#alias python='python3'
+#export PATH=~/playground/mlir/llvm-project/build/bin/:$PATH
+#export PATH="/Users/me/.local/bin/:$PATH"
+alias ls='ls --color=always'
+#alias x='dirs -v'
+#for index ({1..9}) alias "$index"="cd +${index}"; unset index
+setopt hist_ignore_all_dups  # no duplicates
+setopt hist_save_no_dups     # don't save duplicates
+setopt hist_ignore_space     # no commands starting with space
+setopt hist_reduce_blanks    # remove all unneccesary spaces
+setopt share_history         # share history between sessions
+HISTSIZE=50000
+SAVEHIST=10000
+# disable sort when completing options of any command
+# disable sort when completing `git checkout`
+PROMPT='%F{255}%~ %B%F{6}❯%F{3}❯%F{2}❯ '
+## Init
+MODE_INDICATOR_VIINS='%F{15}%F{8}INSERT%f'
+MODE_INDICATOR_VICMD='%F{10}%F{2}NORMAL%f'
+MODE_INDICATOR_REPLACE='%F{9}%F{1}REPLACE%f'
+MODE_INDICATOR_SEARCH='%F{13}%F{5}SEARCH%f'
+MODE_INDICATOR_VISUAL='%F{12}%F{4}VISUAL%f'
+MODE_INDICATOR_VLINE='%F{12}%F{4}V-LINE%f'
+#
+#
+
+#FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+#export FZF_TMUX=1
+#export FZF_TMUX_OPTS='-r 35%'

@@ -52,6 +52,7 @@
     isNormalUser = true;
     description = "me";
     extraGroups = [ "networkmanager" "wheel" "input" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
     ];
